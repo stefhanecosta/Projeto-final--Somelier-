@@ -1,0 +1,371 @@
+.votacao-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+#lista-eventos-publicos h2 {
+  color: var(--navy-deep);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#grid-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.evento-card-publico {
+  background: var(--white-pure);
+  border-radius: 15px;
+  padding: 0;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.evento-card-publico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border-color: var(--gold-elegant);
+}
+
+.evento-card-content {
+  padding: 1.5rem;
+}
+
+.evento-card-content h3 {
+  color: var(--navy-deep);
+  margin-bottom: 0.75rem;
+  font-size: 2.3rem;
+}
+
+.evento-data, .evento-descricao {
+  color: var(--navy-light);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.evento-tag {
+  display: inline-block;
+  background: var(--gold-elegant);
+  color: var(--navy-deep);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.musicas-preview {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: var(--white-soft);
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid var(--gold-elegant);
+}
+
+.btn-participar {
+  width: 100%;
+  background: var(--navy-medium);
+  color: var(--white-pure);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.75rem;
+}
+
+.btn-participar:hover {
+  background: var(--navy-deep);
+  transform: translateY(-2px);
+}
+
+.info-evento-card {
+  background: var(--white-pure);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  border-left: 4px solid var(--gold-elegant);
+}
+
+.info-evento-card h2 {
+  color: var(--navy-deep);
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+}
+
+.instrucoes-votacao {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--white-pure);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.instrucoes-votacao h3 {
+  color: var(--navy-deep);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-serif);
+}
+
+.instrucoes-votacao p {
+  color: var(--navy-light);
+  margin-bottom: 0.5rem;
+}
+
+.aviso-importante {
+  text-align: center;
+  color: var(--navy-medium);
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--gold-light);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border-left: 4px solid var(--gold-elegant);
+  font-weight: 500;
+}
+
+.opcoes-votacao {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.opcao-musica {
+  background: var(--white-pure);
+  border: 2px solid var(--white-soft);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.opcao-musica:hover {
+  border-color: var(--gold-elegant);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.card-musica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icone-musica {
+  font-size: 2.5rem;
+  color: var(--gold-elegant);
+}
+
+.info-musica-votacao {
+  background: var(--navy-medium); 
+  color: var(--gold-elegant); 
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--gold-light);
+}
+
+.info-musica-votacao h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold-elegant); 
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: var(--font-serif);
+}
+
+.info-musica-votacao p {
+  font-size: 1.1rem;
+  color: var(--gold-light); 
+  text-align: center;
+  font-weight: 500;
+}
+
+.botao-votar {
+  background: var(--navy-medium);
+  color: var(--white-pure);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+
+.botao-votar:hover {
+  background: var(--navy-deep);
+  transform: translateY(-2px);
+}
+
+.separador-votacao {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--navy-light);
+  font-weight: 600;
+  position: relative;
+  font-family: var(--font-serif);
+}
+
+.separador-votacao::before,
+.separador-votacao::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: var(--white-soft);
+}
+
+.separador-votacao::before {
+  left: 0;
+}
+
+.separador-votacao::after {
+  right: 0;
+}
+
+.mensagem-ja-votou, .confirmacao-voto {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--white-pure);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  margin: 2rem 0;
+}
+
+.mensagem-ja-votou h3, .confirmacao-voto h4 {
+  color: var(--navy-deep);
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+
+.voto-sucesso {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--gold-elegant);
+}
+
+.agradecimento {
+  margin-top: 1rem;
+  color: var(--navy-light);
+}
+
+.voto-pessoal {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--white-soft);
+  border-radius: 8px;
+  border-left: 4px solid var(--gold-elegant);
+}
+
+.btn-voltar {
+  background: var(--navy-medium);
+  color: var(--white-pure);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-voltar:hover {
+  background: var(--navy-deep);
+  transform: translateY(-2px);
+}
+
+.voltar-lista {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.voltar-lista a {
+  color: var(--navy-medium);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.voltar-lista a:hover {
+  color: var(--navy-deep);
+  text-decoration: underline;
+}
+
+.erro, .sem-musicas, .sem-eventos {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--white-pure);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  margin: 2rem 0;
+}
+
+.erro h3 {
+  color: var(--navy-medium);
+  margin-bottom: 1rem;
+}
+
+.sem-eventos h3, .sem-musicas p {
+  color: var(--navy-light);
+  margin-bottom: 1rem;
+}
+
+.ranking-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ranking-item.vencedor {
+  background: #fff7d6;
+  font-weight: bold;
+}
+
+.ranking-item.vencedor {
+  background: var(--gold-light);
+  border-left: 6px solid var(--gold-elegant);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 10px 0;
+  animation: pulseChampion 1.5s infinite;
+  box-shadow: 0 0 20px rgba(245, 197, 24, 0.6);
+}
+
+@keyframes pulseChampion {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(245, 197, 24, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+  }
+}

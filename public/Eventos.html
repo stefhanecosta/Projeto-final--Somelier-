@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos - 𝄞Somelier</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/evento.css">
+  <link rel="stylesheet" href="css/componente.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header>
+  <h1>Eventos - 𝄞Somelier</h1>
+</header>
+
+<nav>
+  <a href="cadastrarMusica.html">Cadastrar eventos</a> |
+  <!-- <a href="eventoPublicado.html">Ver eventos publicados</a> -->
+</nav>
+
+<main>
+  <section class="eventos-container">
+    <h2>Meus Eventos</h2>
+    <div id="mensagem-erro" style="display: none;"></div>
+    <div id="loading" style="display: none; text-align: center; padding: 40px;">
+      <p>Carregando eventos...</p>
+    </div>
+    <div id="lista-eventos"></div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 𝄞Somelier
+</footer>
+
+<script src="js/eventos.js"></script>
+</body>
+</html>

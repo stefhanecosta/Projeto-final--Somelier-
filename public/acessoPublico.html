@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝄞Somelier</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componente.css">
+</head>
+<body>
+
+<header>
+  <h1>𝄞Somelier</h1>
+</header>
+
+<main>
+  <section>
+    <h2>Bem-vindo ao Somelier</h2>
+    <p>Este site permite que o público vote nas músicas que irão tocar no evento, sua participação ajuda a criar a experiência musical do evento.<br> 
+      Clique no botão abaixo para participar da votação.</p>
+
+    <div style="margin-top:20px;">
+      <a id="btn-acessar" class="btn">
+        Acessar Votação
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 𝄞Somelier
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('e');
+
+  if (!slug) {
+    alert('Evento inválido');
+  } else {
+    document.getElementById('btn-acessar').href =
+      `votacao.html?e=${slug}`;
+  }
+</script>
+
+</body>
+</html>

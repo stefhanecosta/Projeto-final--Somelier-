@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  color: #1a1a2e;
+  line-height: 1.7;
+  min-height: 100vh;
+  position: relative;
+}
+
+header, nav, main, section, footer {
+  display: block;
+}
+
+:root {
+  --navy-deep: #0a1128;
+  --navy-medium: #1a2238;
+  --navy-light: #2d3561;
+  --gold-elegant: #d4af37;
+  --gold-light: #f0d98c;
+  --white-pure: #ffffff;
+  --white-soft: #f8f9fa;
+  --shadow-color: rgba(10, 17, 40, 0.15);
+}

@@ -1,0 +1,132 @@
+.eventos-container { 
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.eventos-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--navy-deep, #1a365d);
+}
+
+.evento-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 4px solid #d4af37; 
+  transition: all 0.3s ease;
+}
+
+.evento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.evento-card h3 {
+  color: var(--navy-deep, #1a365d);
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.evento-card p {
+  color: var(--navy-light, #4a5568);
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.evento-musicas {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.evento-musicas div {
+  line-height: 1.7;
+  color: var(--navy-light, #4a5568);
+}
+
+.evento-botoes-discretos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--navy-deep, #1a365d);
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.evento-botoes-discretos button {
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.btn-publicar {
+  background: #28a745;
+  color: #fff;
+}
+
+.btn-publicar:hover {
+  background: #218838;
+}
+
+.btn-excluir {
+  background: #111827;
+  color: #fff;
+}
+
+.btn-excluir:hover {
+  background: #000;
+}
+
+#mensagem-erro {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.empty-state p {
+  color: var(--navy-light, #4a5568);
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .evento-botoes-discretos {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .evento-botoes-discretos button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .evento-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .evento-card p {
+    font-size: 0.95rem;
+  }
+}

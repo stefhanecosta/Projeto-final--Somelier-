@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Músicas - Somelier</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cadastrarMusica.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+
+<header class="dashboard-header">
+  <h1>Cadastro de Músicas - 𝄞Somelier</h1>
+</header>
+
+
+<section class="user-bar">
+  <div class="user-bar-container">
+
+    <div class="perfil-dropdown">
+      <button class="btn-perfil" id="btnPerfil">
+        👤 Meu Perfil
+        <span class="icone-dropdown">▼</span>
+      </button>
+
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#" class="dropdown-item" onclick="verPerfil(event)">
+          <span class="dropdown-icone"></span>
+          Ver Perfil
+        </a>
+        <a href="#" class="dropdown-item" onclick="editarPerfil(event)">
+          <span class="dropdown-icone"></span>
+          Editar Perfil
+        </a>
+        <a href="Eventos.html" class="dropdown-item">
+          <span class="dropdown-icone"></span>
+          Meus Eventos
+        </a>
+
+        <a href="#" class="dropdown-item sair" onclick="sair(event)">
+          <span class="dropdown-icone"></span>
+          Sair
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container-musicas">
+
+  <div class="secao-titulo">
+    <h2>Cadastrar evento</h2>
+    <p>Cadastre músicas e crie seu evento musical</p>
+  </div>
+
+  
+  <div class="painel-form">
+    <h3>Novo evento</h3>
+
+    <form id="formEvento">
+      <div class="form-grid">
+
+        <div class="campo-form">
+          <label for="nomeEvento">Nome do evento *</label>
+          <input type="text" id="nomeEvento" placeholder="Ex: Show de Rock" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="descricao">Descrição do evento *</label>
+          <input type="text" id="descricao" placeholder="Ex:" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="duracaoEvento">Duração do evento</label>
+          <input type="text" id="duracaoEvento" placeholder="Ex: 19:00 às 22:00 horas ">
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-adicionar">
+        + Adicionar Evento
+      </button>
+    </form>
+  </div>
+
+  
+  <div class="painel-biblioteca">
+
+    <div class="biblioteca-header">
+      <div class="biblioteca-titulo-linha">
+        <h3>
+          Eventos Adicionados
+          <span class="contador-eventos" id="contador">0 eventos</span>
+        </h3>
+      </div>
+      
+
+    <div class="lista-musicas" id="listaEventos">
+      <div class="mensagem-vazia">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <p>Nenhuma evento cadastrado ainda.<br>Selecione um evento!</p>
+      </div>
+    </div>
+  </div>  
+</div>  
+
+  
+  <div class="painel-form">
+    <h3>Nova Música</h3>
+
+    <form id="formMusica">
+      <div class="form-grid">
+
+        <div class="campo-form">
+          <label for="nomeMusica">Nome da Música *</label>
+          <input type="text" id="nomeMusica" placeholder="Ex: Garota de Ipanema" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="artista">Artista *</label>
+          <input type="text" id="artista" placeholder="Ex: Tom Jobim" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="genero">Gênero Musical *</label>
+          <select id="genero" required>
+            <option value="">Selecione...</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Clássico">Clássico</option>
+            <option value="Rock">Rock</option>
+            <option value="MPB">MPB</option>
+            <option value="Pop">Pop</option>
+            <option value="Sertanejo">Sertanejo</option>
+            <option value="Blues">Blues</option>
+            <option value="Bossa Nova">Bossa Nova</option>
+            <option value="Samba">Samba</option>
+            <option value="Eletrônica">Eletrônica</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label for="duracao">Duração</label>
+          <input type="text" id="duracao" placeholder="Ex: 3:45">
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-adicionar">
+        + Adicionar Música
+      </button>
+    </form>
+  </div>
+
+  
+  <div class="painel-biblioteca">
+
+    <div class="biblioteca-header">
+      <div class="biblioteca-titulo-linha">
+        <h3>
+          Músicas Adicionadas
+          <span class="contador-musicas" id="contador">0 músicas</span>
+        </h3>
+      </div>
+      
+      <div class="barra-pesquisa">
+        <input type="text" id="busca" placeholder="Buscar música ou artista...">
+      </div>
+
+      <div class="acoes-biblioteca">
+        <button class="btn-selecionar-todos" onclick="selecionarTodas()">Selecionar Todas</button>
+        <button class="btn-limpar-selecao" onclick="limparSelecao()">Limpar Seleção</button>
+      </div>
+    </div>
+
+    
+
+    <div class="lista-musicas" id="listaMusicas">
+      <div class="mensagem-vazia">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <p>Nenhuma música cadastrada ainda.<br>Adicione músicas para criar seu evento!</p>
+      </div>
+    </div>
+
+    <button class="btn-criar-evento" id="btnCriarEvento" onclick="criarEvento()" disabled>
+       Criar Evento
+    </button>
+
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 𝄞Somelier
+</footer>
+
+<script src="js/musicas.js"></script>
+</body>
+</html>

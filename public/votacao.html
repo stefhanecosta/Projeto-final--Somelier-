@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Votação de Músicas - 𝄞Somelier</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/componente.css" />
+  <link rel="stylesheet" href="css/votacao.css" />
+</head>
+<body>
+
+<header>
+  <h1>Votação de Músicas - 𝄞Somelier</h1>
+</header>
+
+<main>
+  <section class="votacao-container">
+
+   
+    <div id="votacao-especifica">
+
+      <div id="info-evento"></div>
+      
+      <div class="acoes-votacao">
+        <button id="btn-copiar-link">🔗 Copiar link da votação</button>
+      </div>
+
+      
+      <div id="interface-votacao"></div>
+
+      
+      <div id="resultado-votacao" class="resultado-votacao"></div>
+    </div>
+
+    
+    <div id="ja-votou" style="display:none">
+      <div class="mensagem-ja-votou">
+        <h3>Você já votou!</h3>
+        <p>Obrigado por participar da votação.</p>
+        <button onclick="window.location.reload()">Atualizar</button>
+      </div>
+    </div>
+
+    
+    <div id="erro-evento" style="display:none">
+      <h3>Evento não encontrado</h3>
+      <p>Este evento não existe ou não está mais disponível.</p>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 𝄞Somelier
+</footer>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/votacao.js"></script>
+</body>
+</html>
