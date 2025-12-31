@@ -12,7 +12,14 @@ const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  cors: { origin: '*' }
+  cors: {
+    origin: [
+      'http://localhost:5500',
+      'http://127.0.0.1:5500',
+      'https://projeto-final-somelier.vercel.app'
+    ],
+    methods: ['GET', 'POST']
+  }
 });
 
 // DISPONIBILIZA O IO PARA OS CONTROLLERS
