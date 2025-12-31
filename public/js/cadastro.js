@@ -1,3 +1,5 @@
+const API_URL = 'https://projeto-final-somelier.onrender.com/api';
+
 const form = document.getElementById('form-cadastro');
 
 form.addEventListener('submit', async function(e) {
@@ -30,7 +32,7 @@ form.addEventListener('submit', async function(e) {
 
   try {
     // Envia os dados para a API
-    const response = await fetch('http://localhost:3000/api/users/cadastro', {
+    const response = await fetch(`${API_URL}/users/cadastro`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,6 +1,8 @@
+const API_URL = 'https://projeto-final-somelier.onrender.com/api';
+
 const params = new URLSearchParams(window.location.search);
 const slug = params.get('e');
-const socket = io();
+const socket = io('https://projeto-final-somelier.onrender.com');
 
 
 let evento = null;
@@ -25,7 +27,7 @@ socket.on('rankingAtualizado', data => {
 
 async function carregarEvento(slug) {
   try {
-    const response = await fetch(`/api/votacao/${slug}`);
+    const response = await fetch(`${API_URL}/votacao/${slug}`);
     if (!response.ok) throw new Error();
 
     evento = await response.json();
@@ -76,7 +78,7 @@ function renderizarVotacao() {
 
 async function votar(musicaId) {
   try {
-    const response = await fetch('/api/votacao', {
+    const response = await fetch(`${API_URL}/votacao`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -104,7 +106,7 @@ async function votar(musicaId) {
 
 async function carregarResultado() {
   try {
-    const res = await fetch(`/api/votacao/resultado/${evento.id}`);
+    const res = await fetch(`${API_URL}/votacao/resultado/${evento.id}`);
     const ranking = await res.json();
 
     const div = document.getElementById('resultado-votacao');

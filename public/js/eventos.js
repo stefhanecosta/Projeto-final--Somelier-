@@ -1,3 +1,5 @@
+const API_URL = 'https://projeto-final-somelier.onrender.com/api';
+
 const lista = document.getElementById('lista-eventos');
 const loading = document.getElementById('loading');
 const mensagemErro = document.getElementById('mensagem-erro');
@@ -23,7 +25,7 @@ async function carregarEventos() {
 
     const token = localStorage.getItem('token');
 
-    const res = await fetch('/api/eventoMusica', {
+    const res = await fetch(`${API_URL}/eventoMusica`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -100,7 +102,7 @@ async function publicarEvento(eventoId) {
   try {
     const token = localStorage.getItem('token');
 
-    const res = await fetch(`/api/eventos/${eventoId}/publicar`, {
+    const res = await fetch(`${API_URL}/eventos/${eventoId}/publicar`, {
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -127,7 +129,7 @@ async function excluirEvento(id) {
   try {
     const token = localStorage.getItem('token');
 
-    const res = await fetch(`/api/eventos/${id}`, {
+    const res = await fetch(`${API_URL}/eventos/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,

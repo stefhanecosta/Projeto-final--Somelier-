@@ -1,3 +1,5 @@
+const API_URL = 'https://projeto-final-somelier.onrender.com/api';
+
 document.getElementById('loginForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -14,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
   try {
     console.log('Enviando requisição para /api/auth/login');
 
-    const response = await fetch('http://localhost:3000/api/auth/login', {
+    const response = await fetch(`${API_URL}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

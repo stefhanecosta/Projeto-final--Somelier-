@@ -1,6 +1,8 @@
+const API_URL = 'https://projeto-final-somelier.onrender.com/api';
+
 const params = new URLSearchParams(window.location.search);
 const slug = params.get('e');
-const socket = io();
+const socket = io('https://projeto-final-somelier.onrender.com');
 
 let evento = null;
 
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function carregarEvento() {
   try {
-    const res = await fetch(`/api/votacao/${slug}`);
+    const res = await fetch(`${API_URL}/votacao/${slug}`);
     evento = await res.json();
 
     document.getElementById('info-evento').innerHTML = `
@@ -38,7 +40,7 @@ async function carregarEvento() {
 }
 
 async function carregarRanking() {
-  const res = await fetch(`/api/votacao/resultado/${evento.id}`);
+  const res = await fetch(`${API_URL}/votacao/resultado/${evento.id}`);
   const ranking = await res.json();
 
   const div = document.getElementById('resultado-votacao');
