@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos Publicados - 𝄞Somelier</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/componente.css" />
+  <link rel="stylesheet" href="css/votacao.css" />
+</head>
+<body>
+
+<header>
+  <h1>Eventos Publicados - 𝄞Somelier</h1>
+</header>
+
+<main>
+  <section class="votacao-container">
+
+    
+    <div id="info-evento"></div>
+
+    
+    <div class="info-evento-card">
+      <h3>🔗 Link para o público votar</h3>
+      <input id="link-publico" readonly style="width:100%; padding:10px; font-size:1rem;" />
+      <button id="btn-copiar-link" style="margin-top:10px;">
+        Copiar link
+      </button>
+    </div>
+
+    
+    <div id="resultado-votacao" class="resultado-votacao"></div>
+
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 𝄞Somelier
+</footer>
+
+<script src="https://projeto-final-somelier.onrender.com/socket.io/socket.io.js"></script>
+<script src="js/eventoPublicado.js"></script>
+</body>
+</html>
