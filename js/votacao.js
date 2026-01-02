@@ -132,7 +132,7 @@ async function carregarResultado() {
 }
 
 function copiarLink() {
-  const link = `${window.location.origin}/acessoPublico.html?e=${evento.slug}`;
+  const link = `${window.location.origin}/acessoPublico?e=${evento.slug}`;
 
   navigator.clipboard.writeText(link);
 
