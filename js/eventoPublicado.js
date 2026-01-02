@@ -59,7 +59,7 @@ async function carregarEvento() {
     `;
 
     document.getElementById('link-publico').value =
-      `${window.location.origin}/acessoPublico.html?e=${evento.slug}`;
+      `${window.location.origin}/acessoPublico?e=${evento.slug}`;
 
     carregarRanking();
   } catch (e) {
