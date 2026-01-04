@@ -596,8 +596,6 @@ body {
   font-weight: 500;
   transition: all 0.3s ease;
   flex-shrink: 0;
-  white-space: nowrap;
-  min-width: 90px;
 }
 
 .btn-deletar:hover {
