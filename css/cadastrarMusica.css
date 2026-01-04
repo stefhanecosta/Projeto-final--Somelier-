@@ -573,8 +573,7 @@ body {
 .item-musica {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
-  gap: 12px;
+  align-items: center;
   padding: 12px;
   border-bottom: 1px solid #eee;
 }
@@ -582,12 +581,7 @@ body {
 .item-musica label {
   flex: 1;
   cursor: pointer;
-  min-width: 0;
-  white-space: nowrap;        
-  overflow: hidden;           
-  text-overflow: ellipsis;    
 }
-
 
 .btn-deletar {
   background: rgba(26, 34, 56, 0.1);
