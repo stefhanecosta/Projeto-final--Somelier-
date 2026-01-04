@@ -574,7 +574,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
   border-bottom: 1px solid #eee;
 }
 
