@@ -573,7 +573,8 @@ body {
 .item-musica {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
+  gap: 12px;
   padding: 12px;
   border-bottom: 1px solid #eee;
 }
@@ -581,6 +582,11 @@ body {
 .item-musica label {
   flex: 1;
   cursor: pointer;
+
+  min-width: 0;            /* 👈 ESSENCIAL */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-deletar {
@@ -593,8 +599,12 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   transition: all 0.3s ease;
+
   flex-shrink: 0;
+  white-space: nowrap;
+  min-width: 90px;
 }
+
 
 .btn-deletar:hover {
   background: var(--navy-light);
