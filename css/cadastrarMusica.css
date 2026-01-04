@@ -573,16 +573,14 @@ body {
 .item-musica {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding: 12px;
   border-bottom: 1px solid #eee;
 }
 
 .item-musica label {
   flex: 1;
   cursor: pointer;
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
 }
 
 .btn-deletar {
@@ -595,7 +593,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  flex-shrink: 0;
+  
 }
 
 .btn-deletar:hover {
