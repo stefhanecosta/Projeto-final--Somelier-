@@ -573,14 +573,17 @@ body {
 .item-musica {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 12px;
+  align-items: flex-start;
+  gap: 12px;
   border-bottom: 1px solid #eee;
 }
 
 .item-musica label {
   flex: 1;
   cursor: pointer;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 .btn-deletar {
