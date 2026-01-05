@@ -596,7 +596,6 @@ body {
   width: 100px;
 }
 
-
 .btn-deletar:hover {
   background: var(--navy-light);
   color: var(--white-pure);

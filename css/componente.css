@@ -60,7 +60,6 @@ form p {
   font-size: 0.9rem;
 }
 
-
 button, .btn {
   width: 100%;
   background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-medium) 100%);
