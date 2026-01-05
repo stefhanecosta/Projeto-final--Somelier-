@@ -583,13 +583,16 @@ body {
   flex: 1;
   cursor: pointer;
 
-  min-width: 0;            /* 👈 ESSENCIAL */
+  min-width: 0;            
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .btn-deletar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(26, 34, 56, 0.1);
   color: var(--navy-deep);
   border: 2px solid var(--navy-light);
@@ -599,7 +602,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   transition: all 0.3s ease;
-
+  width: auto;
   flex-shrink: 0;
   white-space: nowrap;
   min-width: 90px;
