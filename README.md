@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎵 Somelier Musical
+# 𝄞Somelier
 
 ### Sistema web para criação de eventos musicais e votação pública
 
@@ -10,6 +10,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Render](https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 </div>
 
@@ -22,13 +23,13 @@ Matrícula: **2023098225**
 
 ---
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 
 <table>
 <tr>
 <td>
 
-O **Somelier Musical** é um sistema web desenvolvido para a criação, gerenciamento e votação de músicas em eventos musicais.
+O **Somelier** é um sistema web desenvolvido para a criação, gerenciamento e votação de músicas em eventos musicais.
 
 A aplicação permite que cantores ou organizadores criem eventos, cadastrem playlists e disponibilizem uma página pública para votação, onde o público pode escolher suas músicas favoritas.
 
@@ -46,13 +47,13 @@ A aplicação permite que cantores ou organizadores criem eventos, cadastrem pla
 
 ## ⚙️ Funcionalidades
 
-### 🎤 Área do Cantor (Administrador)
+### Área do Cantor (Administrador)
 - Criação de eventos musicais
 - Cadastro de músicas e playlists
 - Publicação de eventos para votação
 - Visualização de ranking e resultados
 
-### 🗳️ Área de Votação Pública
+### Área de Votação Pública
 - Página pública acessada por link
 - Sistema de votação única
 - Exibição aleatória das músicas
@@ -61,7 +62,7 @@ A aplicação permite que cantores ou organizadores criem eventos, cadastrem pla
 
 ---
 
-## 🔄 Como Funciona
+## Como Funciona
 
 <details open>
 <summary><b> Para o Cantor / Organizador</b></summary>
@@ -89,7 +90,7 @@ A aplicação permite que cantores ou organizadores criem eventos, cadastrem pla
 
 ---
 
-## 🧱 Arquitetura do Sistema
+## Arquitetura do Sistema
 
 O projeto segue uma arquitetura **cliente-servidor**, dividida em três camadas:
 
@@ -131,6 +132,10 @@ Essa separação facilita manutenção, escalabilidade e organização do códig
 <img src="https://skillicons.dev/icons?i=render" width="48" height="48" alt="Render" />
 <br>Render
 </td>
+<td align="center" width="110">
+<img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" />
+<br>Vercel
+</td>
 </tr>
 </table>
 
@@ -138,7 +143,7 @@ Essa separação facilita manutenção, escalabilidade e organização do códig
 
 ---
 
-## 🗄️ Banco de Dados
+## Banco de Dados
 
 - Banco de dados **PostgreSQL**
 - Hospedado na plataforma **Render**
@@ -149,25 +154,26 @@ Essa separação facilita manutenção, escalabilidade e organização do códig
   - Música
   - Voto
 
-O uso de ORM abstrai o SQL e facilita a manutenção do sistema.
 
 ---
 
-## 🚀 Deploy
+## Deploy
 
-### Backend
+### 🔹 Backend
 - Hospedado no **Render**
+- API REST em Node.js + Express
 - Deploy automático a partir do GitHub
-- Uso de variáveis de ambiente para segurança
+- Variáveis de ambiente para credenciais do banco
 
-### Frontend
-- Hospedado separadamente
-- Consome a API pública do backend
+### 🔹 Frontend
+- Hospedado no **Vercel**
+- Interface construída com HTML, CSS e JavaScript
+- Consome a API pública hospedada no Render
 - Comunicação em tempo real via Socket.IO
 
----
+---  
 
-## 🔐 Variáveis de Ambiente
+## Variáveis de Ambiente
 
 ```env
 DB_HOST=
